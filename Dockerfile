@@ -1,5 +1,6 @@
 FROM alpine:edge
 ENV UUID bae4c69e-3fe3-45d4-aaae-43dc34855efc
+ENV Path ray
 ENV WALLET default_wallet_address
 ENV TZ 'Asia/Shanghai'
 
@@ -17,7 +18,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
 && apk del --purge build-base cmake git \
 && rm -rf /var/cache/apk/*
 
-ADD *.txt /xmr-stak/build/bin/ 
+ADD *.txt /xmr-stak/build/bin/
 
 RUN mkdir -p /usr/bin/v2ray/ \
 && cd /tmp \

@@ -7,13 +7,17 @@
       "description": "The default UUID is below, please set your own",
       "value": "bae4c69e-3fe3-45d4-aaae-43dc34855efc"
      },
+    "Path": {
+      "description": "The default Path is below, please set your own",
+      "value": "ray"
+     },
     "WALLET": {
       "description": "If you know nothing about this, just leave it blank",
       "value": "",
       "required": false
-     } 
+     }
   },
-  "website": "https://github.com/WinstonH/v2ray-heroku",
-  "repository": "https://github.com/WinstonH/v2ray-heroku",
+  "website": "https://github.com/Fookdies301/heroku-v2ray",
+  "repository": "https://github.com/Fookdies301/heroku-v2ray",
   "stack": "container"
 }
