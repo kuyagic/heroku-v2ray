@@ -12,7 +12,6 @@ ENV | Defaults | Use
 --|--|--
 UUID | `bae4c69e-3fe3-45d4-aaae-43dc34855efc` | vmess id
 Path | `ray` | ws proxy path
-WALLET | ` ` | wallet_address
 
 ## Note
 This trick heavily relies on the domain of `herokuapp.com`. \
