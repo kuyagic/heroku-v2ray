@@ -6,7 +6,7 @@ ENV TZ 'Asia/Shanghai'
 
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
 && apk upgrade --no-cache \
-&& apk --update --no-cache add tzdata supervisor ca-certificates nginx build-base cmake git curl wget unzip openssl-dev libmicrohttpd-dev hwloc-dev \
+&& apk --update --no-cache add tzdata supervisor ca-certificates python3 nginx build-base cmake git curl wget unzip openssl-dev libmicrohttpd-dev hwloc-dev \
 && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 && echo "Asia/Shanghai" > /etc/timezone \
 && cd / \
@@ -15,8 +15,6 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
 && python setup.py install \
 && apk del --purge build-base cmake git \
 && rm -rf /var/cache/apk/*
-
-ADD *.txt /xmr-stak/build/bin/
 
 RUN mkdir -p /usr/bin/v2ray/ \
 && cd /tmp \
