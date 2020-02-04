@@ -12,7 +12,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
 && cd / \
 && git clone https://github.com/Supervisor/meld3.git \
 && cd meld3 \
-&& python setup.py install \
+&& python3 setup.py install \
 && apk del --purge build-base cmake git \
 && rm -rf /var/cache/apk/*
 
