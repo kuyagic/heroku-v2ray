@@ -9,12 +9,6 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
 && apk --update --no-cache add tzdata supervisor ca-certificates nginx build-base cmake git curl wget unzip openssl-dev libmicrohttpd-dev hwloc-dev \
 && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 && echo "Asia/Shanghai" > /etc/timezone \
-&& git clone https://github.com/fireice-uk/xmr-stak.git \
-&& sed -i 's/2.0/0.0/g' xmr-stak/xmrstak/donate-level.hpp \
-&& mkdir xmr-stak/build \
-&& cd xmr-stak/build \
-&& cmake -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF .. \
-&& make install \
 && cd / \
 && git clone https://github.com/Supervisor/meld3.git \
 && cd meld3 \
